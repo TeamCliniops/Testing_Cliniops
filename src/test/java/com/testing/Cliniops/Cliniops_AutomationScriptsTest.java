@@ -3,8 +3,15 @@ package com.testing.Cliniops;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Cliniops_AutomationScriptsTest extends Cliniops_ReusableMethodsTest{
@@ -16,6 +23,7 @@ WebDriver dr;
 	public void Selectbrowser(String browser){
 		if(browser.equalsIgnoreCase("firefox")){
 			//System.setProperty("webdriver.firefox.marionette", "C:/Users/Zunaira's/Documents/QA automation/geckodriver-v0.16.1-win64/geckodriver.exe");
+			//Ignore--This is added to check in github
 			dr=new FirefoxDriver();	
 			dr.manage().window().maximize();
 
@@ -37,7 +45,7 @@ WebDriver dr;
 	
 
 	@Test
-	public void loginErrorMessage1() throws IOException{
+	public void loginErrorMessage1() throws IOException, InterruptedException{
 		
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		Thread.sleep(3000);
@@ -59,7 +67,7 @@ WebDriver dr;
 	
 	}
 	@Test
-	public void sucessFulLogin1() throws IOException{
+	public void sucessFulLogin1() throws IOException, InterruptedException{
 		
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		
