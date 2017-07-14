@@ -34,15 +34,15 @@ public class Cliniops_ReusableMethodsTest {
 	 * Creation date : July 17 2017
 	 * last modified:  July 17 2017
 	 * */
-	public static void dropDown(WebElement dd, int index){
+	public static void dropDown(WebElement dd, String index){
 		
 		Select select = new Select(dd);
 		if(dd.isDisplayed()){
-			select.selectByIndex(index);
-			System.out.println("Pass" +dd+ "is selected");
+			select.selectByValue(index);
+			System.out.println("Pass" +dd+ " is selected");
 		}
 			else{
-				System.out.println("Fail" +dd + "is not displayed");
+				System.out.println("Fail" +dd + " is not displayed");
 			}
 		
 	}

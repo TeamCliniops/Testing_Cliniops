@@ -22,5 +22,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Naresh/Downloads/IEDriverServer_Win32_3.4.0.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

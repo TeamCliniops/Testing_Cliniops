@@ -16,7 +16,7 @@
           </parameter>
       </classes>
   </test> 
-  <test name="IETest" allow-return-values="true">
+    <test name="IETest" allow-return-values="true">
       <classes>
           <parameter name="browser" value="IE">
           <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
@@ -24,4 +24,5 @@
           </parameter>
       </classes>
   </test>
+  
 </suite> <!-- Suite -->

@@ -2,46 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <parameter name="browser" value="IE"/>
-  <test name="ChromeTest(failed)" parallel="tests">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
-        <methods>
-          <include name="forgotPassword"/>
-          <include name="sucessFulLogin1"/>
-          <include name="loginErrorMessage3"/>
-          <include name="loginErrorMessage1"/>
-          <include name="loginErrorMessage2"/>
-          <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="Selectbrowser"/>
-          <include name="Selectbrowser"/>
-          <include name="Selectbrowser"/>
-        </methods>
-      </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test name="Test(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
-        <methods>
-          <include name="forgotPassword"/>
-          <include name="sucessFulLogin1"/>
-          <include name="loginErrorMessage3"/>
-          <include name="loginErrorMessage1"/>
-          <include name="loginErrorMessage2"/>
-          <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="Selectbrowser"/>
-          <include name="Selectbrowser"/>
-          <include name="Selectbrowser"/>
-        </methods>
-      </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
-    </classes>
-  </test> <!-- Test(failed) -->
   <test name="IETest(failed)" parallel="tests">
     <parameter name="browser" value="IE"/>
     <classes>
