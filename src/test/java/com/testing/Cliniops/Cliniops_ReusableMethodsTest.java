@@ -18,10 +18,10 @@ public class Cliniops_ReusableMethodsTest {
 	public static void enterText(WebElement obj, String textVal, String objName) throws IOException{
 		if(obj.isDisplayed()){
 			obj.sendKeys(textVal);
-			System.out.println("Pass"+ "enterText"+textVal + " is entered in " + objName);
+			System.out.println("Pass "+ "enterText:"+textVal + " is entered in " + objName);
 			
 		}else{
-			System.out.println("Fail"+ "enterText"+objName + " field is not displayed, please check your application.");
+			System.out.println("Fail "+ "enterText:"+objName + " field is not displayed, please check your application.");
 			
 		}
 
