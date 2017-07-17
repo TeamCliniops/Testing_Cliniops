@@ -12,6 +12,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -56,58 +57,61 @@ WebDriver dr;
 	@Test(priority=1)
 	public void loginErrorMessage1() throws IOException, InterruptedException{
 		System.out.println("Login:Testcase1 started");
+		startReport("Cliniops loginErrorMessage1 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		Thread.sleep(3000);
 		
 		WebElement username= dr.findElement(By.id("username"));
-		enterText(username, "Abhishek", "Username field");
+		entertext(username, "Abhishek", "Username field");
 		
 		WebElement pwd= dr.findElement(By.id("password"));
-		enterText(pwd, "welcome", "Password field");
+		entertext(pwd, "welcome", "Password field");
 		
 		WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		clickObj(authBtn, "Authenticate Button");
-		
-		WebElement errorMsg=dr.findElement(By.className("error"));
+		ButtonClick(authBtn, "Authenticate Button");
+		Thread.sleep(5000);
+		WebElement errorMsg=dr.findElement(By.xpath("//*[text()='Authenitcation failed !']"));
 		String error= errorMsg.getText();
 		String expectedText="Authenitcation failed !";
 		
-		validateMsg(errorMsg, expectedText, error);
+		ErrorMessage(errorMsg, expectedText, error);
 		System.out.println("Login:Testcase1 ended");
 	
 	}
 	@Test(priority=2)
 	public void sucessFulLogin1() throws IOException, InterruptedException{
 		System.out.println("Login:Testcase2 started");
+		startReport("Cliniops sucessFulLogin1 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
+		
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		
 		WebElement username= dr.findElement(By.id("username"));
-		enterText(username, "Abhishek", "Username field");
+		entertext(username, "Abhishek", "Username field");
 		
 		WebElement pwd= dr.findElement(By.id("password"));
-		enterText(pwd, "Welcome123#", "Password field");
+		entertext(pwd, "Welcome123#", "Password field");
 		
 		WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		clickObj(authBtn, "Authenticate Button");
+		ButtonClick(authBtn, "Authenticate Button");
 		Thread.sleep(3000);
 		
 		
 		WebElement dd1=dr.findElement(By.id("investigator_study"));
-		clickObj(dd1, "dropdown1 is clicked");
+		ButtonClick(dd1, "dropdown1 is clicked");
 		WebElement opt1=dr.findElement(By.xpath("//*[text()='Cisplatin/Etoposide/Rad................-Small Cell Lung Cancer']"));
-		clickObj(opt1, "option1 is clicked");
+		ButtonClick(opt1, "option1 is clicked");
 		//dropDown(dd1, "5");
 		Thread.sleep(3000);
 
 		WebElement dd2=dr.findElement(By.id("lang_type"));
-		clickObj(dd2, "dropdown2 is clicked");
+		ButtonClick(dd2, "dropdown2 is clicked");
 		WebElement opt2=dr.findElement(By.xpath("//*[text()='English']"));
-		clickObj(opt2, "option2 is clicked");
+		ButtonClick(opt2, "option2 is clicked");
 		//dropDown(dd1, "1");
 				Thread.sleep(4000);
 		
 		WebElement clickLogin= dr.findElement(By.xpath(".//*[@id='login']/div[7]/input"));
-		clickObj(clickLogin, "Login");
+		ButtonClick(clickLogin, "Login");
 
 		System.out.println("Login:Testcase2 ended");
 
@@ -116,46 +120,48 @@ WebDriver dr;
 		 @Test(priority=3)
 		 public void loginErrorMessage2() throws IOException, InterruptedException{
 				System.out.println("Login:Testcase3 started");
+				startReport("Cliniops loginErrorMessage2 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
 		  
 		  WebElement username= dr.findElement(By.id("username"));
-		  enterText(username, "", "Username field");
+		  entertext(username, "", "Username field");
 		  
 		  WebElement pwd= dr.findElement(By.id("password"));
-		  enterText(pwd, "", "Password field");
+		  entertext(pwd, "", "Password field");
 		  Thread.sleep(4000);
 		  WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		  clickObj(authBtn, "Authenticate Button");
+		  ButtonClick(authBtn, "Authenticate Button");
 		  WebElement usererrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the username']"));
 		  String error1= usererrorMsg.getText();
 		  String expectedText1="Please enter the username";
-		  validateMsg(usererrorMsg, expectedText1, error1);
+		  ErrorMessage(usererrorMsg, expectedText1, error1);
 		  WebElement pwderrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the password']"));
 		  String error2= pwderrorMsg.getText();
 		  String expectedText2="Please enter the password";
-		  validateMsg(pwderrorMsg, expectedText2, error2);
+		  ErrorMessage(pwderrorMsg, expectedText2, error2);
 			System.out.println("Login:Testcase3 ended");
 	 }
 		 
 		 
 		 @Test(priority=4)
 		 public void loginErrorMessage3() throws IOException, InterruptedException{
+			 startReport("Cliniops loginErrorMessage3 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
 				System.out.println("Login:Testcase4 started");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
 		  
 		  WebElement username= dr.findElement(By.id("username"));
-		  enterText(username, "Abhishek", "Username field");
+		  entertext(username, "Abhishek", "Username field");
 		  
 		  WebElement pwd= dr.findElement(By.id("password"));
-		  enterText(pwd, "", "Password field");
+		  entertext(pwd, "", "Password field");
 		  Thread.sleep(4000);
 		  WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		  clickObj(authBtn, "Authenticate Button");
+		  ButtonClick(authBtn, "Authenticate Button");
 		  Thread.sleep(4000);	  
 		  WebElement pwderrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the password']"));
 		  String error2= pwderrorMsg.getText();
 		  String expectedText2="Please enter the password";
-		  validateMsg(pwderrorMsg, expectedText2, error2);
+		  ErrorMessage(pwderrorMsg, expectedText2, error2);
 		  Thread.sleep(3000);
 			System.out.println("Login:Testcase4 ended");
 		 }
@@ -163,25 +169,25 @@ WebDriver dr;
 		 @Test(priority=5)
 		 public void forgotPassword() throws IOException, InterruptedException{
 				System.out.println("Login:Testcase5 started");
-			 
+				 startReport("Cliniops forgotPassword Report","C:\\Users\\Naresh\\Desktop\\Report\\");
 			 dr.get("https://bridgetherapeutics.cliniops.com");
 			 
 			 WebElement username= dr.findElement(By.id("username"));
-			  enterText(username, "Abhishek", "Username field");
+			  entertext(username, "Abhishek", "Username field");
 			 Thread.sleep(3000);
 			 WebElement forgotPwd=dr.findElement(By.linkText("Forgot password..? Click here..."));
 			 forgotPwd.click();
 			 Thread.sleep(3000);
 			 WebElement email=dr.findElement(By.id("forgotemail"));
-			 enterText(email, "abc@gmail.com", "Email id");
+			 entertext(email, "abc@gmail.com", "Email id");
 			 Thread.sleep(3000);
 			 WebElement requestNewPwd=dr.findElement(By.id("req_new_pass"));
-			 clickObj(requestNewPwd, "Request new password");
+			 ButtonClick(requestNewPwd, "Request new password");
 			 Thread.sleep(3000);
 			 WebElement emailIdError=dr.findElement(By.xpath("//*[text()='Email-id does not exist in database.']"));
 			 String errorMsg=emailIdError.getText();
 			 String actualErrorMsg="Email-id does not exist in database.";
-			 validateMsg(emailIdError, actualErrorMsg, errorMsg);
+			 ErrorMessage(emailIdError, actualErrorMsg, errorMsg);
 			 Thread.sleep(3000);
 			 WebElement backToLogin=dr.findElement(By.linkText("Back to Login"));
 			 backToLogin.click();
@@ -191,13 +197,14 @@ WebDriver dr;
 		 
 		@AfterMethod
 		
-			public void closeBrowser(){
+			public void closeBrowser() throws IOException {
 			dr.close();
+		bw.close();
 		}
+		
 
 
 	}
 
 	
-
 
