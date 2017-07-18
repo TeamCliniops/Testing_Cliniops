@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">15 methods, 1 failed,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.testing.Cliniops.Cliniops_AutomationScriptsTest" hash-for-method="sucessFulLogin1">sucessFulLogin1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -169,11 +183,6 @@
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.testing.Cliniops.Cliniops_AutomationScriptsTest" hash-for-method="sucessFulLogin1">sucessFulLogin1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.testing.Cliniops.Cliniops_AutomationScriptsTest" hash-for-method="sucessFulLogin1">sucessFulLogin1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -186,6 +195,41 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.testing.Cliniops.Cliniops_AutomationScriptsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="sucessFulLogin1">
+                  </a> <!-- sucessFulLogin1 -->
+                  <span class="method-name">sucessFulLogin1</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;DESKTOP-SRM8OJ8&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ZUNAIR~1\AppData\Local\Temp\scoped_dir4288_2081}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 34fcb696be02345e21f11edd79d14171
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:150)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:177)
+	at com.testing.Cliniops.Cliniops_ReusableMethodsTest.dropDown(Cliniops_ReusableMethodsTest.java:45)
+	at com.testing.Cliniops.Cliniops_AutomationScriptsTest.sucessFulLogin1(Cliniops_AutomationScriptsTest.java:124)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -290,13 +334,6 @@
                   <span class="method-name">sucessFulLogin1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sucessFulLogin1">
-                  </a> <!-- sucessFulLogin1 -->
-                  <span class="method-name">sucessFulLogin1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -374,68 +411,144 @@ data.addRows(15);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'forgotPassword')
 data.setCell(0, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(0, 3, 70429);
+=======
+data.setCell(0, 3, 6804);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'sucessFulLogin1')
+data.setCell(1, 1, 'forgotPassword')
 data.setCell(1, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(1, 3, 49727);
+=======
+data.setCell(1, 3, 5936);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'sucessFulLogin1')
 data.setCell(2, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(2, 3, 49203);
+=======
+data.setCell(2, 3, 5816);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'sucessFulLogin1')
 data.setCell(3, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(3, 3, 47114);
+=======
+data.setCell(3, 3, 5030);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'forgotPassword')
+data.setCell(4, 1, 'sucessFulLogin1')
 data.setCell(4, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(4, 3, 43137);
+=======
+data.setCell(4, 3, 4538);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'forgotPassword')
+data.setCell(5, 1, 'loginErrorMessage2')
 data.setCell(5, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(5, 3, 35145);
+=======
+data.setCell(5, 3, 3675);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'loginErrorMessage3')
 data.setCell(6, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(6, 3, 10498);
+=======
+data.setCell(6, 3, 3406);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'loginErrorMessage3')
+data.setCell(7, 1, 'loginErrorMessage1')
 data.setCell(7, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(7, 3, 9174);
+=======
+data.setCell(7, 3, 3258);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'loginErrorMessage3')
+data.setCell(8, 1, 'loginErrorMessage2')
 data.setCell(8, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(8, 3, 8038);
+=======
+data.setCell(8, 3, 2276);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'loginErrorMessage2')
+data.setCell(9, 1, 'loginErrorMessage1')
 data.setCell(9, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(9, 3, 7504);
+=======
+data.setCell(9, 3, 2111);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(10, 0, 10)
+<<<<<<< HEAD
 data.setCell(10, 1, 'loginErrorMessage1')
+=======
+data.setCell(10, 1, 'loginErrorMessage3')
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(10, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(10, 3, 7041);
+=======
+data.setCell(10, 3, 1721);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(11, 0, 11)
+<<<<<<< HEAD
 data.setCell(11, 1, 'loginErrorMessage2')
+=======
+data.setCell(11, 1, 'sucessFulLogin1')
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(11, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(11, 3, 6679);
+=======
+data.setCell(11, 3, 1426);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(12, 0, 12)
 data.setCell(12, 1, 'loginErrorMessage1')
 data.setCell(12, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(12, 3, 6604);
+=======
+data.setCell(12, 3, 1205);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'loginErrorMessage1')
+data.setCell(13, 1, 'loginErrorMessage2')
 data.setCell(13, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(13, 3, 5446);
+=======
+data.setCell(13, 3, 950);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(14, 0, 14)
+<<<<<<< HEAD
 data.setCell(14, 1, 'loginErrorMessage2')
+=======
+data.setCell(14, 1, 'loginErrorMessage3')
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 data.setCell(14, 2, 'com.testing.Cliniops.Cliniops_AutomationScriptsTest')
+<<<<<<< HEAD
 data.setCell(14, 3, 5329);
+=======
+data.setCell(14, 3, 877);
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
+<<<<<<< HEAD
               <span class="suite-total-time">Total running time: 6 minutes</span>
+=======
+              <span class="suite-total-time">Total running time: 49 seconds</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -468,83 +581,165 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">forgotPassword</span>
+<<<<<<< HEAD
                 <span class="method-start">69828 ms</span>
+=======
+                <span class="method-start">9527 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage1</span>
+<<<<<<< HEAD
                 <span class="method-start">141299 ms</span>
+=======
+                <span class="method-start">15465 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage2</span>
+<<<<<<< HEAD
                 <span class="method-start">147905 ms</span>
+=======
+                <span class="method-start">17580 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage3</span>
+<<<<<<< HEAD
                 <span class="method-start">155411 ms</span>
+=======
+                <span class="method-start">19858 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sucessFulLogin1</span>
+<<<<<<< HEAD
                 <span class="method-start">164586 ms</span>
+=======
+                <span class="method-start">21581 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
+<<<<<<< HEAD
                 <span class="method-start">214316 ms</span>
+=======
+                <span class="method-start">26124 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- configuration-test after -->
               <div class="configuration-test before">
                 <span class="method-name">Selectbrowser(chrome)</span>
+<<<<<<< HEAD
                 <span class="method-start">218179 ms</span>
+=======
+                <span class="method-start">26188 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">forgotPassword</span>
+<<<<<<< HEAD
                 <span class="method-start">259297 ms</span>
+=======
+                <span class="method-start">29533 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage1</span>
+<<<<<<< HEAD
                 <span class="method-start">294443 ms</span>
+=======
+                <span class="method-start">34567 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage2</span>
+<<<<<<< HEAD
                 <span class="method-start">299891 ms</span>
+=======
+                <span class="method-start">35788 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage3</span>
+<<<<<<< HEAD
                 <span class="method-start">305269 ms</span>
+=======
+                <span class="method-start">36738 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">sucessFulLogin1</span>
+<<<<<<< HEAD
                 <span class="method-start">313308 ms</span>
+=======
+                <span class="method-start">37615 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
+<<<<<<< HEAD
                 <span class="method-start">360470 ms</span>
+=======
+                <span class="method-start">39045 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- configuration-test after -->
               <div class="configuration-test before">
                 <span class="method-name">Selectbrowser(IE)</span>
+<<<<<<< HEAD
                 <span class="method-start">364308 ms</span>
+=======
+                <span class="method-start">39275 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">forgotPassword</span>
+<<<<<<< HEAD
                 <span class="method-start">396943 ms</span>
+=======
+                <span class="method-start">41702 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage1</span>
+<<<<<<< HEAD
                 <span class="method-start">440162 ms</span>
+=======
+                <span class="method-start">48506 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage2</span>
+<<<<<<< HEAD
                 <span class="method-start">447224 ms</span>
+=======
+                <span class="method-start">51768 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginErrorMessage3</span>
+<<<<<<< HEAD
                 <span class="method-start">453904 ms</span>
+=======
+                <span class="method-start">55443 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sucessFulLogin1</span>
+<<<<<<< HEAD
                 <span class="method-start">464403 ms</span>
+=======
+                <span class="method-start">58849 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeBrowser</span>
+<<<<<<< HEAD
                 <span class="method-start">513607 ms</span>
+=======
+                <span class="method-start">64665 ms</span>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

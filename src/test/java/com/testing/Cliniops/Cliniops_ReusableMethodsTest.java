@@ -2,8 +2,12 @@ package com.testing.Cliniops;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Cliniops_ReusableMethodsTest { 
 
@@ -63,6 +67,11 @@ public class Cliniops_ReusableMethodsTest {
 		}else{
 			System.out.println("Fail: " + objName+ " is not displayed, please check your application");
 		}
+		/*final WebDriverWait wait=new WebDriverWait(dr,30);
+		wait.until(ExpectedConditions.refreshed(ExpectedConditions.elementToBeClickable(By.id("Authenticate"))));
+		dr.findElement(By.id("Authenticate")).click();
+		*/
+		
 	}
 
 	/* 

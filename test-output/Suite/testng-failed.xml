@@ -2,16 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="browser" value="IE"/>
-  <test name="IETest(failed)">
-    <parameter name="browser" value="IE"/>
+  <test name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
         <methods>
+<<<<<<< HEAD
           <include name="forgotPassword"/>
           <include name="sucessFulLogin1"/>
           <include name="loginErrorMessage3"/>
           <include name="loginErrorMessage1"/>
           <include name="loginErrorMessage2"/>
+=======
+          <include name="sucessFulLogin1"/>
+          <include name="closeBrowser"/>
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <include name="closeBrowser"/>
           <include name="closeBrowser"/>
           <include name="Selectbrowser"/>
@@ -20,5 +25,5 @@
         </methods>
       </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
     </classes>
-  </test> <!-- IETest(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

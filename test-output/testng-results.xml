@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="15" passed="15">
+<testng-results skipped="0" failed="1" total="15" passed="14">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Suite" duration-ms="513943" started-at="2017-07-14T23:41:03Z" finished-at="2017-07-14T23:49:37Z">
+=======
+  <suite name="Suite" duration-ms="64743" started-at="2017-07-17T21:02:32Z" finished-at="2017-07-17T21:03:36Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
     <groups>
     </groups>
+<<<<<<< HEAD
     <test name="Test" duration-ms="214352" started-at="2017-07-14T23:41:03Z" finished-at="2017-07-14T23:44:38Z">
+=======
+    <test name="Test" duration-ms="26156" started-at="2017-07-17T21:02:32Z" finished-at="2017-07-17T21:02:58Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
+<<<<<<< HEAD
         <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="Selectbrowser" is-config="true" duration-ms="69363" started-at="2017-07-14T16:41:03Z" finished-at="2017-07-14T16:42:13Z">
+=======
+        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@5792a0]" name="Selectbrowser" is-config="true" duration-ms="9515" started-at="2017-07-17T14:02:32Z" finished-at="2017-07-17T14:02:41Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <params>
             <param index="0">
               <value>
@@ -18,35 +30,67 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Selectbrowser -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="forgotPassword" duration-ms="70429" started-at="2017-07-14T16:42:13Z" finished-at="2017-07-14T16:43:24Z">
+=======
+        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@5792a0]" name="forgotPassword" duration-ms="5936" started-at="2017-07-17T14:02:41Z" finished-at="2017-07-17T14:02:47Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPassword -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="loginErrorMessage1" duration-ms="6604" started-at="2017-07-14T16:43:25Z" finished-at="2017-07-14T16:43:31Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@5792a0]" name="loginErrorMessage1" duration-ms="2111" started-at="2017-07-17T14:02:47Z" finished-at="2017-07-17T14:02:49Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage1 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="loginErrorMessage2" duration-ms="7504" started-at="2017-07-14T16:43:31Z" finished-at="2017-07-14T16:43:39Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@5792a0]" name="loginErrorMessage2" duration-ms="2276" started-at="2017-07-17T14:02:49Z" finished-at="2017-07-17T14:02:51Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage2 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="loginErrorMessage3" duration-ms="9174" started-at="2017-07-14T16:43:39Z" finished-at="2017-07-14T16:43:48Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@5792a0]" name="loginErrorMessage3" duration-ms="1721" started-at="2017-07-17T14:02:51Z" finished-at="2017-07-17T14:02:53Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage3 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="sucessFulLogin1" duration-ms="49727" started-at="2017-07-14T16:43:48Z" finished-at="2017-07-14T16:44:38Z">
+=======
+        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@5792a0]" name="sucessFulLogin1" duration-ms="4538" started-at="2017-07-17T14:02:53Z" finished-at="2017-07-17T14:02:58Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sucessFulLogin1 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="closeBrowser" is-config="true" duration-ms="33" started-at="2017-07-14T16:44:38Z" finished-at="2017-07-14T16:44:38Z">
+=======
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@5792a0]" name="closeBrowser" is-config="true" duration-ms="17" started-at="2017-07-17T14:02:58Z" finished-at="2017-07-17T14:02:58Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
     </test> <!-- Test -->
+<<<<<<< HEAD
     <test name="ChromeTest" duration-ms="145091" started-at="2017-07-14T23:44:42Z" finished-at="2017-07-14T23:47:07Z">
+=======
+    <test name="ChromeTest" duration-ms="13041" started-at="2017-07-17T21:02:58Z" finished-at="2017-07-17T21:03:11Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
+<<<<<<< HEAD
         <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="Selectbrowser" is-config="true" duration-ms="41117" started-at="2017-07-14T16:44:42Z" finished-at="2017-07-14T16:45:23Z">
+=======
+        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@19c0f4a]" name="Selectbrowser" is-config="true" duration-ms="3345" started-at="2017-07-17T14:02:58Z" finished-at="2017-07-17T14:03:01Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <params>
             <param index="0">
               <value>
@@ -57,35 +101,130 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Selectbrowser -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="forgotPassword" duration-ms="35145" started-at="2017-07-14T16:45:23Z" finished-at="2017-07-14T16:45:58Z">
+=======
+        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@19c0f4a]" name="forgotPassword" duration-ms="5030" started-at="2017-07-17T14:03:01Z" finished-at="2017-07-17T14:03:06Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPassword -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="loginErrorMessage1" duration-ms="5446" started-at="2017-07-14T16:45:58Z" finished-at="2017-07-14T16:46:03Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@19c0f4a]" name="loginErrorMessage1" duration-ms="1205" started-at="2017-07-17T14:03:06Z" finished-at="2017-07-17T14:03:07Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage1 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="loginErrorMessage2" duration-ms="5329" started-at="2017-07-14T16:46:03Z" finished-at="2017-07-14T16:46:09Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@19c0f4a]" name="loginErrorMessage2" duration-ms="950" started-at="2017-07-17T14:03:07Z" finished-at="2017-07-17T14:03:08Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage2 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="loginErrorMessage3" duration-ms="8038" started-at="2017-07-14T16:46:09Z" finished-at="2017-07-14T16:46:17Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@19c0f4a]" name="loginErrorMessage3" duration-ms="877" started-at="2017-07-17T14:03:08Z" finished-at="2017-07-17T14:03:09Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage3 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="sucessFulLogin1" duration-ms="47114" started-at="2017-07-14T16:46:17Z" finished-at="2017-07-14T16:47:04Z">
+=======
+        <test-method status="FAIL" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@19c0f4a]" name="sucessFulLogin1" duration-ms="1426" started-at="2017-07-17T14:03:09Z" finished-at="2017-07-17T14:03:11Z">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-SRM8OJ8', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ZUNAIR~1\AppData\Local\Temp\scoped_dir4288_2081}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 34fcb696be02345e21f11edd79d14171]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=59.0.3071.115)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 12 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-SRM8OJ8', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ZUNAIR~1\AppData\Local\Temp\scoped_dir4288_2081}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 34fcb696be02345e21f11edd79d14171
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:150)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:177)
+	at com.testing.Cliniops.Cliniops_ReusableMethodsTest.dropDown(Cliniops_ReusableMethodsTest.java:45)
+	at com.testing.Cliniops.Cliniops_AutomationScriptsTest.sucessFulLogin1(Cliniops_AutomationScriptsTest.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sucessFulLogin1 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="closeBrowser" is-config="true" duration-ms="2799" started-at="2017-07-14T16:47:04Z" finished-at="2017-07-14T16:47:07Z">
+=======
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@19c0f4a]" name="closeBrowser" is-config="true" duration-ms="184" started-at="2017-07-17T14:03:11Z" finished-at="2017-07-17T14:03:11Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
     </test> <!-- ChromeTest -->
+<<<<<<< HEAD
     <test name="IETest" duration-ms="149632" started-at="2017-07-14T23:47:08Z" finished-at="2017-07-14T23:49:37Z">
+=======
+    <test name="IETest" duration-ms="25453" started-at="2017-07-17T21:03:11Z" finished-at="2017-07-17T21:03:36Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
+<<<<<<< HEAD
         <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="Selectbrowser" is-config="true" duration-ms="32635" started-at="2017-07-14T16:47:08Z" finished-at="2017-07-14T16:47:40Z">
+=======
+        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@8e7350]" name="Selectbrowser" is-config="true" duration-ms="2427" started-at="2017-07-17T14:03:11Z" finished-at="2017-07-17T14:03:13Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <params>
             <param index="0">
               <value>
@@ -96,27 +235,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Selectbrowser -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="forgotPassword" duration-ms="43137" started-at="2017-07-14T16:47:40Z" finished-at="2017-07-14T16:48:23Z">
+=======
+        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@8e7350]" name="forgotPassword" duration-ms="6804" started-at="2017-07-17T14:03:13Z" finished-at="2017-07-17T14:03:20Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPassword -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="loginErrorMessage1" duration-ms="7041" started-at="2017-07-14T16:48:24Z" finished-at="2017-07-14T16:48:31Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@8e7350]" name="loginErrorMessage1" duration-ms="3258" started-at="2017-07-17T14:03:20Z" finished-at="2017-07-17T14:03:23Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage1 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="loginErrorMessage2" duration-ms="6679" started-at="2017-07-14T16:48:31Z" finished-at="2017-07-14T16:48:37Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@8e7350]" name="loginErrorMessage2" duration-ms="3675" started-at="2017-07-17T14:03:23Z" finished-at="2017-07-17T14:03:27Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage2 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="loginErrorMessage3" duration-ms="10498" started-at="2017-07-14T16:48:37Z" finished-at="2017-07-14T16:48:48Z">
+=======
+        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@8e7350]" name="loginErrorMessage3" duration-ms="3406" started-at="2017-07-17T14:03:27Z" finished-at="2017-07-17T14:03:30Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage3 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="sucessFulLogin1" duration-ms="49203" started-at="2017-07-14T16:48:48Z" finished-at="2017-07-14T16:49:37Z">
+=======
+        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@8e7350]" name="sucessFulLogin1" duration-ms="5816" started-at="2017-07-17T14:03:30Z" finished-at="2017-07-17T14:03:36Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sucessFulLogin1 -->
+<<<<<<< HEAD
         <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="closeBrowser" is-config="true" duration-ms="333" started-at="2017-07-14T16:49:37Z" finished-at="2017-07-14T16:49:37Z">
+=======
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@8e7350]" name="closeBrowser" is-config="true" duration-ms="63" started-at="2017-07-17T14:03:36Z" finished-at="2017-07-17T14:03:36Z">
+>>>>>>> branch 'master' of https://github.com/TeamCliniops/Testing_Cliniops
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
