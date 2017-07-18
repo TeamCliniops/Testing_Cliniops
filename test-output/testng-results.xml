@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="316155" started-at="2017-07-14T06:26:12Z" finished-at="2017-07-14T06:31:29Z">
+  <suite name="Suite" duration-ms="513943" started-at="2017-07-14T23:41:03Z" finished-at="2017-07-14T23:49:37Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="111792" started-at="2017-07-14T06:26:12Z" finished-at="2017-07-14T06:28:04Z">
+    <test name="Test" duration-ms="214352" started-at="2017-07-14T23:41:03Z" finished-at="2017-07-14T23:44:38Z">
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
-        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@70fda8]" name="Selectbrowser" is-config="true" duration-ms="13469" started-at="2017-07-13T23:26:12Z" finished-at="2017-07-13T23:26:26Z">
+        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="Selectbrowser" is-config="true" duration-ms="69363" started-at="2017-07-14T16:41:03Z" finished-at="2017-07-14T16:42:13Z">
           <params>
             <param index="0">
               <value>
@@ -18,35 +18,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Selectbrowser -->
-        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@70fda8]" name="forgotPassword" duration-ms="30716" started-at="2017-07-13T23:26:26Z" finished-at="2017-07-13T23:26:57Z">
+        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="forgotPassword" duration-ms="70429" started-at="2017-07-14T16:42:13Z" finished-at="2017-07-14T16:43:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPassword -->
-        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@70fda8]" name="loginErrorMessage1" duration-ms="4981" started-at="2017-07-13T23:26:57Z" finished-at="2017-07-13T23:27:02Z">
+        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="loginErrorMessage1" duration-ms="6604" started-at="2017-07-14T16:43:25Z" finished-at="2017-07-14T16:43:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage1 -->
-        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@70fda8]" name="loginErrorMessage2" duration-ms="5586" started-at="2017-07-13T23:27:02Z" finished-at="2017-07-13T23:27:07Z">
+        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="loginErrorMessage2" duration-ms="7504" started-at="2017-07-14T16:43:31Z" finished-at="2017-07-14T16:43:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage2 -->
-        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@70fda8]" name="loginErrorMessage3" duration-ms="8378" started-at="2017-07-13T23:27:07Z" finished-at="2017-07-13T23:27:15Z">
+        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="loginErrorMessage3" duration-ms="9174" started-at="2017-07-14T16:43:39Z" finished-at="2017-07-14T16:43:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage3 -->
-        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@70fda8]" name="sucessFulLogin1" duration-ms="48583" started-at="2017-07-13T23:27:15Z" finished-at="2017-07-13T23:28:04Z">
+        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="sucessFulLogin1" duration-ms="49727" started-at="2017-07-14T16:43:48Z" finished-at="2017-07-14T16:44:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sucessFulLogin1 -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@70fda8]" name="closeBrowser" is-config="true" duration-ms="67" started-at="2017-07-13T23:28:04Z" finished-at="2017-07-13T23:28:04Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@26be92ad]" name="closeBrowser" is-config="true" duration-ms="33" started-at="2017-07-14T16:44:38Z" finished-at="2017-07-14T16:44:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
     </test> <!-- Test -->
-    <test name="ChromeTest" duration-ms="101537" started-at="2017-07-14T06:28:04Z" finished-at="2017-07-14T06:29:46Z">
+    <test name="ChromeTest" duration-ms="145091" started-at="2017-07-14T23:44:42Z" finished-at="2017-07-14T23:47:07Z">
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
-        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@3a8624]" name="Selectbrowser" is-config="true" duration-ms="8052" started-at="2017-07-13T23:28:04Z" finished-at="2017-07-13T23:28:12Z">
+        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="Selectbrowser" is-config="true" duration-ms="41117" started-at="2017-07-14T16:44:42Z" finished-at="2017-07-14T16:45:23Z">
           <params>
             <param index="0">
               <value>
@@ -57,35 +57,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Selectbrowser -->
-        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@3a8624]" name="forgotPassword" duration-ms="28732" started-at="2017-07-13T23:28:12Z" finished-at="2017-07-13T23:28:41Z">
+        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="forgotPassword" duration-ms="35145" started-at="2017-07-14T16:45:23Z" finished-at="2017-07-14T16:45:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPassword -->
-        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@3a8624]" name="loginErrorMessage1" duration-ms="4454" started-at="2017-07-13T23:28:41Z" finished-at="2017-07-13T23:28:45Z">
+        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="loginErrorMessage1" duration-ms="5446" started-at="2017-07-14T16:45:58Z" finished-at="2017-07-14T16:46:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage1 -->
-        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@3a8624]" name="loginErrorMessage2" duration-ms="5143" started-at="2017-07-13T23:28:45Z" finished-at="2017-07-13T23:28:51Z">
+        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="loginErrorMessage2" duration-ms="5329" started-at="2017-07-14T16:46:03Z" finished-at="2017-07-14T16:46:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage2 -->
-        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@3a8624]" name="loginErrorMessage3" duration-ms="7937" started-at="2017-07-13T23:28:51Z" finished-at="2017-07-13T23:28:59Z">
+        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="loginErrorMessage3" duration-ms="8038" started-at="2017-07-14T16:46:09Z" finished-at="2017-07-14T16:46:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage3 -->
-        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@3a8624]" name="sucessFulLogin1" duration-ms="47043" started-at="2017-07-13T23:28:59Z" finished-at="2017-07-13T23:29:46Z">
+        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="sucessFulLogin1" duration-ms="47114" started-at="2017-07-14T16:46:17Z" finished-at="2017-07-14T16:47:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sucessFulLogin1 -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@3a8624]" name="closeBrowser" is-config="true" duration-ms="168" started-at="2017-07-13T23:29:46Z" finished-at="2017-07-13T23:29:46Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@1bce4f0a]" name="closeBrowser" is-config="true" duration-ms="2799" started-at="2017-07-14T16:47:04Z" finished-at="2017-07-14T16:47:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
     </test> <!-- ChromeTest -->
-    <test name="IETest" duration-ms="102686" started-at="2017-07-14T06:29:46Z" finished-at="2017-07-14T06:31:29Z">
+    <test name="IETest" duration-ms="149632" started-at="2017-07-14T23:47:08Z" finished-at="2017-07-14T23:49:37Z">
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
-        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@d62f43]" name="Selectbrowser" is-config="true" duration-ms="3140" started-at="2017-07-13T23:29:46Z" finished-at="2017-07-13T23:29:49Z">
+        <test-method status="PASS" signature="Selectbrowser(java.lang.String)[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="Selectbrowser" is-config="true" duration-ms="32635" started-at="2017-07-14T16:47:08Z" finished-at="2017-07-14T16:47:40Z">
           <params>
             <param index="0">
               <value>
@@ -96,27 +96,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Selectbrowser -->
-        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@d62f43]" name="forgotPassword" duration-ms="28642" started-at="2017-07-13T23:29:49Z" finished-at="2017-07-13T23:30:18Z">
+        <test-method status="PASS" signature="forgotPassword()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="forgotPassword" duration-ms="43137" started-at="2017-07-14T16:47:40Z" finished-at="2017-07-14T16:48:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotPassword -->
-        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@d62f43]" name="loginErrorMessage1" duration-ms="5512" started-at="2017-07-13T23:30:18Z" finished-at="2017-07-13T23:30:23Z">
+        <test-method status="PASS" signature="loginErrorMessage1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="loginErrorMessage1" duration-ms="7041" started-at="2017-07-14T16:48:24Z" finished-at="2017-07-14T16:48:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage1 -->
-        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@d62f43]" name="loginErrorMessage2" duration-ms="7094" started-at="2017-07-13T23:30:23Z" finished-at="2017-07-13T23:30:30Z">
+        <test-method status="PASS" signature="loginErrorMessage2()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="loginErrorMessage2" duration-ms="6679" started-at="2017-07-14T16:48:31Z" finished-at="2017-07-14T16:48:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage2 -->
-        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@d62f43]" name="loginErrorMessage3" duration-ms="9421" started-at="2017-07-13T23:30:30Z" finished-at="2017-07-13T23:30:40Z">
+        <test-method status="PASS" signature="loginErrorMessage3()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="loginErrorMessage3" duration-ms="10498" started-at="2017-07-14T16:48:37Z" finished-at="2017-07-14T16:48:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginErrorMessage3 -->
-        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@d62f43]" name="sucessFulLogin1" duration-ms="48821" started-at="2017-07-13T23:30:40Z" finished-at="2017-07-13T23:31:28Z">
+        <test-method status="PASS" signature="sucessFulLogin1()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="sucessFulLogin1" duration-ms="49203" started-at="2017-07-14T16:48:48Z" finished-at="2017-07-14T16:49:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sucessFulLogin1 -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@d62f43]" name="closeBrowser" is-config="true" duration-ms="47" started-at="2017-07-13T23:31:28Z" finished-at="2017-07-13T23:31:29Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testing.Cliniops.Cliniops_AutomationScriptsTest@6a41eaa2]" name="closeBrowser" is-config="true" duration-ms="333" started-at="2017-07-14T16:49:37Z" finished-at="2017-07-14T16:49:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

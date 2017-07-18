@@ -8,7 +8,10 @@
       <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
         <methods>
           <include name="forgotPassword"/>
-          <include name="closeBrowser"/>
+          <include name="sucessFulLogin1"/>
+          <include name="loginErrorMessage3"/>
+          <include name="loginErrorMessage1"/>
+          <include name="loginErrorMessage2"/>
           <include name="closeBrowser"/>
           <include name="closeBrowser"/>
           <include name="Selectbrowser"/>
