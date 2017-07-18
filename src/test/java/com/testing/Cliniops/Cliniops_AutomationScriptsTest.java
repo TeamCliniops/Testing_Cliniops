@@ -1,6 +1,8 @@
 package com.testing.Cliniops;
 
+
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
@@ -10,27 +12,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Cliniops_AutomationScriptsTest extends Cliniops_ReusableMethodsTest{
 
-WebDriver dr;
-
+static WebDriver dr;
+Method tc ;
 	@BeforeMethod
 	@Parameters("browser")
-	public void Selectbrowser(String browser){
+	public static void Selectbrowser(String browser) throws Exception{
+		
+		
+			
 		if(browser.equalsIgnoreCase("firefox")){
 			//System.setProperty("webdriver.firefox.marionette", "C:/Users/Zunaira's/Documents/QA automation/geckodriver-v0.16.1-win64/geckodriver.exe");
 			//Ignore--This is added to check in github
 			dr=new FirefoxDriver();	
 			dr.manage().window().maximize();
-
+System.out.println("firefox launched");
 		}
 		else if(browser.equalsIgnoreCase("chrome")){
 			//System.setProperty("webdriver.chrome.driver", "C:/Users/Zunaira's/Documents/QA automation/chromedriver.exe");
@@ -50,14 +53,13 @@ WebDriver dr;
 
 	        ((DesiredCapabilities) capabilities).setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
 		}
+					
 		
 	}
 	
-
 	@Test(priority=1)
 	public void loginErrorMessage1() throws IOException, InterruptedException{
 		System.out.println("Login:Testcase1 started");
-		startReport("Cliniops loginErrorMessage1 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		Thread.sleep(3000);
 		
@@ -81,8 +83,6 @@ WebDriver dr;
 	@Test(priority=2)
 	public void sucessFulLogin1() throws IOException, InterruptedException{
 		System.out.println("Login:Testcase2 started");
-		startReport("Cliniops sucessFulLogin1 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
-		
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		
 		WebElement username= dr.findElement(By.id("username"));
@@ -119,10 +119,8 @@ WebDriver dr;
 }
 		 @Test(priority=3)
 		 public void loginErrorMessage2() throws IOException, InterruptedException{
-				System.out.println("Login:Testcase3 started");
-				startReport("Cliniops loginErrorMessage2 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
+		  System.out.println("Login:Testcase3 started");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
-		  
 		  WebElement username= dr.findElement(By.id("username"));
 		  entertext(username, "", "Username field");
 		  
@@ -145,8 +143,7 @@ WebDriver dr;
 		 
 		 @Test(priority=4)
 		 public void loginErrorMessage3() throws IOException, InterruptedException{
-			 startReport("Cliniops loginErrorMessage3 Report","C:\\Users\\Naresh\\Desktop\\Report\\");
-				System.out.println("Login:Testcase4 started");
+		  System.out.println("Login:Testcase4 started");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
 		  
 		  WebElement username= dr.findElement(By.id("username"));
@@ -169,7 +166,6 @@ WebDriver dr;
 		 @Test(priority=5)
 		 public void forgotPassword() throws IOException, InterruptedException{
 				System.out.println("Login:Testcase5 started");
-				 startReport("Cliniops forgotPassword Report","C:\\Users\\Naresh\\Desktop\\Report\\");
 			 dr.get("https://bridgetherapeutics.cliniops.com");
 			 
 			 WebElement username= dr.findElement(By.id("username"));
@@ -194,17 +190,17 @@ WebDriver dr;
 			 Thread.sleep(5000);
 				System.out.println("Login:Testcase5 ended");
 		 }
-		 
-		@AfterMethod
+		 @AfterMethod
+		 public void CloseBrowser(){
+			 dr.close();
+		 }
 		
-			public void closeBrowser() throws IOException {
-			dr.close();
-		bw.close();
-		}
 		
 
 
 	}
+
+	
 
 	
 
