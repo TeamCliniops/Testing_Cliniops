@@ -2,6 +2,9 @@ package com.testing.Cliniops;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+
+
 //import java.util.NoSuchElementException;
 //import java.util.function.Function;
 import com.google.common.base.Function;
@@ -14,6 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
@@ -29,47 +33,106 @@ public class Cliniops_AutomationScriptsTest extends Cliniops_ReusableMethodsTest
 WebDriver dr;
 Wait<WebDriver> wait;
 
-	@BeforeTest
-	@Parameters("browser")
+	//@BeforeTest
+	//@Parameters("browser")
 	public void Selectbrowser(String browser){
 		if(browser.equalsIgnoreCase("firefox")){
-			//System.setProperty("webdriver.firefox.marionette", "C:/Users/Zunaira's/Documents/QA automation/geckodriver-v0.16.1-win64/geckodriver.exe");
-			//Ignore--This is added to check in github
 			dr=new FirefoxDriver();	
 			dr.manage().window().maximize();
 			
 		}
 		else if(browser.equalsIgnoreCase("chrome")){
-			//System.setProperty("webdriver.chrome.driver", "C:/Users/Zunaira's/Documents/QA automation/chromedriver.exe");
 			dr=new ChromeDriver();
 			dr.manage().window().maximize();
 			
 		}
 		else if(browser.equalsIgnoreCase("IE")){
-			//System.setProperty("webdriver.ie.driver", "C:/Users/Zunaira's/Documents/QA automation/IEDriverServer.exe");
 	        dr=new InternetExplorerDriver();
 	        dr.manage().window().maximize();
 	        
 		}
-		//dr.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		
 		wait=new FluentWait(dr)
 		.withTimeout(30, TimeUnit.SECONDS)
 		.pollingEvery(4, TimeUnit.SECONDS)
 		.ignoring(NoSuchElementException.class);
 		
-		//wait.pollingEvery(2, TimeUnit.SECONDS);
-		//wait.withTimeout(30, TimeUnit.SECONDS);
-		//wait.ignoring(NoSuchElementException.class);
+	}
+	
+	public void auto_clini_login_001() throws Exception{
+		String expectedTooltipText;
+		String actualTooltipText;
+		Actions tooltip1;
+		dr.get("https://bridgetherapeutics.cliniops.com");
+		
+		WebElement usrname=dr.findElement(By.id("username"));
+		Thread.sleep(5000);
+		tooltip1 = new Actions(dr);
+		tooltip1.moveToElement(usrname).build().perform();
+		Thread.sleep(5000);
+		actualTooltipText=usrname.getAttribute("title");
+		expectedTooltipText="Enter Username";
+		if(expectedTooltipText.equals(actualTooltipText)){
+			System.out.println("Pass:Tooltip for Username displayed Successfully");
+		}
+		
+		WebElement password=dr.findElement(By.id("password"));
+		Thread.sleep(5000);
+		tooltip1 = new Actions(dr);
+		tooltip1.moveToElement(password).build().perform();
+		Thread.sleep(5000);
+		actualTooltipText=password.getAttribute("title");
+		expectedTooltipText="Enter Password";
+		if(expectedTooltipText.equals(actualTooltipText)){
+			System.out.println("Pass:Tooltip for password displayed Successfully");
+		}
+		
+
+		WebElement authenticate=dr.findElement(By.id("Authenticate"));
+		Thread.sleep(5000);
+		tooltip1 = new Actions(dr);
+		tooltip1.moveToElement(authenticate).build().perform();
+		Thread.sleep(5000);
+		actualTooltipText=authenticate.getAttribute("title");
+		expectedTooltipText="Authenticate";
+		if(expectedTooltipText.equals(actualTooltipText)){
+			System.out.println("Pass:Tooltip for Authenticate button displayed Successfully");
+		}
+		
+		usrname.sendKeys("Abhishek");
+		password.sendKeys("Welcome123#");
+		authenticate.click();
+		
+		WebElement selectLang=dr.findElement(By.id("lang_type"));
+		Thread.sleep(5000);
+		tooltip1 = new Actions(dr);
+		tooltip1.moveToElement(authenticate).build().perform();
+		Thread.sleep(5000);
+		actualTooltipText=selectLang.getAttribute("title");
+		expectedTooltipText="Select Language";
+		if(expectedTooltipText.equals(actualTooltipText)){
+			System.out.println("Pass:Tooltip for Select Language Dropdown displayed Successfully");
+		}
+		
+		WebElement loginBtn=dr.findElement(By.xpath(".//*[@id='login']/div[7]/input"));
+		Thread.sleep(5000);
+		tooltip1 = new Actions(dr);
+		tooltip1.moveToElement(loginBtn).build().perform();
+		Thread.sleep(5000);
+		actualTooltipText=loginBtn.getAttribute("title");
+		expectedTooltipText="Login";
+		if(expectedTooltipText.equals(actualTooltipText)){
+			System.out.println("Pass:Tooltip for Login button displayed Successfully");
+		}
 		
 		
 	}
 	
 
-	@Test
+	//@Test
 	public void loginErrorMessage1() throws IOException, InterruptedException{
+		System.out.println("TestCase1 Started!!!");
 		dr.get("https://bridgetherapeutics.cliniops.com");
-		//Thread.sleep(3000);
 		
 		WebElement username= dr.findElement(By.id("username"));
 		enterText(username, "Abhishek", "Username field");
@@ -78,43 +141,33 @@ Wait<WebDriver> wait;
 		enterText(pwd, "welcome", "Password field");
 		
 		WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		clickObj(authBtn, "Authenticate Button");
+		ButtonClick(authBtn, "Authenticate Button");
 		
 		WebElement errorMsg=dr.findElement(By.className("error"));
 		String error= errorMsg.getText();
-		String expectedText="Please enter the user name";
+		String expectedText="Authenitcation failed !";
 		
-		validateMsg(errorMsg, expectedText, error);
-	
+		ErrorMessage(errorMsg, expectedText, error);
+		System.out.println("Testcase1 Ended!!!");
 	}
-	@Test
+	//@Test
 	public void sucessFulLogin1() throws IOException, InterruptedException{
-		
+		System.out.println("TestCase2 Started!!!");
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		
-		//Thread.sleep(5000);
 		WebElement username= dr.findElement(By.id("username"));
 		enterText(username, "Abhishek", "Username field");
-		
-		//Thread.sleep(5000);
 		
 		WebElement pwd= dr.findElement(By.id("password"));
 		enterText(pwd, "Welcome123#", "Password field");
 		
-		//Thread.sleep(5000);
-		//WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		//clickObj(authBtn, "Authenticate Button");
-		
+	
 		WebElement authBtn=wait.until(new Function<WebDriver,WebElement>(){
 			public WebElement apply(WebDriver dr){
 				return dr.findElement(By.id("Authenticate"));
 			}
 		});
-		clickObj(authBtn, "Authenticate Button");
-		
-		//Thread.sleep(7000);
-		//WebElement dd1=dr.findElement(By.id("investigator_study"));
-		//dropDown(dd1, 1);
+		ButtonClick(authBtn, "Authenticate Button");
 		
 		WebElement dd1=wait.until(new Function<WebDriver,WebElement>(){
 			public WebElement apply(WebDriver dr){
@@ -122,31 +175,20 @@ Wait<WebDriver> wait;
 			}
 		});
 		dropDown(dd1, 1);
-		
-		
-		//Thread.sleep(7000);
-		
-		
-		//WebElement dd2=dr.findElement(By.id("lang_type"));
 		WebElement dd2=wait.until(new Function<WebDriver,WebElement>(){
 			public WebElement apply(WebDriver dr){
 				return dr.findElement(By.id("lang_type"));
 			}
 		});
-		
 		dropDown(dd2,1);
-		//Thread.sleep(7000);
-		
-		
 		WebElement clickLogin= dr.findElement(By.xpath(".//*[@id='login']/div[7]/input"));
-		clickObj(clickLogin, "Login");
-		//Thread.sleep(7000);
-
+		ButtonClick(clickLogin, "Login");
+		System.out.println("Testcase2 Ended!!!");
 }
 
-		@Test
+		//@Test
 		 public void loginErrorMessage2() throws IOException, InterruptedException{
-		  
+			System.out.println("TestCase3 Started!!!");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
 		  
 		  WebElement username= dr.findElement(By.id("username"));
@@ -154,26 +196,26 @@ Wait<WebDriver> wait;
 		  
 		  WebElement pwd= dr.findElement(By.id("password"));
 		  enterText(pwd, "", "Password field");
-		  //Thread.sleep(4000);
 		  
 		  WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		  clickObj(authBtn, "Authenticate Button");
+		  ButtonClick(authBtn, "Authenticate Button");
 		  
 		  WebElement usererrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the username']"));
 		  String error1= usererrorMsg.getText();
-		  String expectedText1="Please enter the user name";
-		  validateMsg(usererrorMsg, expectedText1, error1);
+		  String expectedText1="Please enter the username";
+		  ErrorMessage(usererrorMsg, expectedText1, error1);
 		  
 		  WebElement pwderrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the password']"));
 		  String error2= pwderrorMsg.getText();
 		  String expectedText2="Please enter the password";
-		  validateMsg(pwderrorMsg, expectedText2, error2);
-	 }
+		  ErrorMessage(pwderrorMsg, expectedText2, error2);
+		  System.out.println("Testcase3 Ended!!!");
+	}
 		 
 		 
-		 @Test
+		 //@Test
 		 public void loginErrorMessage3() throws IOException, InterruptedException{
-		  
+			 System.out.println("TestCase4 Started!!!");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
 		  
 		  WebElement username= dr.findElement(By.id("username"));
@@ -181,54 +223,47 @@ Wait<WebDriver> wait;
 		  
 		  WebElement pwd= dr.findElement(By.id("password"));
 		  enterText(pwd, "", "Password field");
-		  //Thread.sleep(4000);
 		  
 		  WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		  clickObj(authBtn, "Authenticate Button");
-		  
-		  //WebElement usererrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the username']"));
+		  ButtonClick(authBtn, "Authenticate Button");
 		  
 		  WebElement pwderrorMsg=dr.findElement(By.xpath("//*[@id='login']/div[2]/label"));
 		  String error2= pwderrorMsg.getText();
 		  String expectedText2="Please enter the password";
-		  validateMsg(pwderrorMsg, expectedText2, error2);
-		  //Thread.sleep(3000);
+		  ErrorMessage(pwderrorMsg, expectedText2, error2);
+		  System.out.println("Testcase4 Ended!!!");
 		 }
 		 
-		 @Test
+		 //@Test
 		 public void forgotPassword() throws IOException, InterruptedException{
-			 
+			 System.out.println("TestCase5 Started!!!");
 			 dr.get("https://bridgetherapeutics.cliniops.com");
 			 
 			 WebElement username= dr.findElement(By.id("username"));
 			  enterText(username, "Abhishek", "Username field");
-			 //Thread.sleep(3000);
 			 
 			 WebElement forgotPwd=dr.findElement(By.linkText("Forgot password..? Click here..."));
 			 forgotPwd.click();
-			 //Thread.sleep(5000);
 			 
 			 WebElement email=dr.findElement(By.id("forgotemail"));
 			 enterText(email, "abc@gmail.com", "Email id");
-			 //Thread.sleep(3000);
 			 
 			 WebElement requestNewPwd=dr.findElement(By.id("req_new_pass"));
-			 clickObj(requestNewPwd, "Request new password");
-			 //Thread.sleep(3000);
+			 ButtonClick(requestNewPwd, "Request new password");
 			 
 			 WebElement emailIdError=dr.findElement(By.className("errorserver"));
 			 String errorMsg=emailIdError.getText();
 			 String actualErrorMsg="Email-id does not exist in database.";
-			 validateMsg(emailIdError, actualErrorMsg, errorMsg);
-			 //Thread.sleep(3000);
+			 ErrorMessage(emailIdError, actualErrorMsg, errorMsg);
+	
 			 WebElement backToLogin=dr.findElement(By.linkText("Back to Login"));
 			 backToLogin.click();
-			 //Thread.sleep(5000);
+			 System.out.println("Testcase5 Ended!!!");
 		 }
 		 
-		@AfterTest
+		//@AfterTest
 		
-			public void closeBrowser(){
+			public void CloseBrowser(){
 			dr.close();
 		}
 
