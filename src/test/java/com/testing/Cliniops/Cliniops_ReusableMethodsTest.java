@@ -62,7 +62,7 @@ public class Cliniops_ReusableMethodsTest {
 		}
 		else{
 			Update_Report("Fail","entertext",objname+" field is not displayed,please check application");
-			//System.out.println("Fail:"+objname+" field is not displayed,please check application");}
+			//System.out.println("Fail:"+objname+" field is not displayed,please check application");
 		}
 	}
 	//Name of the method:ButtonClick
@@ -102,6 +102,22 @@ public class Cliniops_ReusableMethodsTest {
 		}
 		else{Update_Report("Fail","ErrorMessage",objname+" is not displayed,please check your application");
 			//System.out.println("Fail:"+objname+" is not displayed,please check your application");
+			}
+	}
+	public static void TooltipValidation(WebElement obj,String Expectedtext,String Actualtext) throws IOException{
+		if(obj.isDisplayed())
+		{
+			
+			if(Expectedtext.trim().contains(Actualtext.trim())){
+				Update_Report("Pass","ErrorMessage","Actual tool tip text: "+ Actualtext+" matching with expected text:"+Expectedtext);
+				//System.out.println("Pass:Actual tooltip text matching with expected text:"+Actualtext);
+				}
+		else{Update_Report("Fail","ErrorMessage","Actual tool tip text: "+ Actualtext+" not matching with expected text:"+Expectedtext);
+			//System.out.println("Fail:Actual tooltip text not matching with expected text"+Actualtext);
+			}
+		}
+		else{Update_Report("Fail","ErrorMessage",obj+" is not displayed,please check your application");
+			//System.out.println("Fail:"+obj+" is not displayed,please check your application");
 			}
 	}
 	//Name of the method:Readingtext
@@ -269,7 +285,7 @@ public static void startReport(String scriptName, String ReportsPath) throws IOE
 	bw.write("<HTML><BODY><TABLE BORDER=0 CELLPADDING=3 CELLSPACING=1 WIDTH=100%>");
 	bw.write("<TABLE BORDER=0 BGCOLOR=BLACK CELLPADDING=3 CELLSPACING=1 WIDTH=100%>");
 	bw.write("<TR><TD BGCOLOR=#66699 WIDTH=27%><FONT FACE=VERDANA COLOR=WHITE SIZE=2><B>Browser Name</B></FONT></TD><TD COLSPAN=6 BGCOLOR=#66699><FONT FACE=VERDANA COLOR=WHITE SIZE=2><B>"
-			+ "FireFox " + "</B></FONT></TD></TR>");
+			+ " FireFox " + "</B></FONT></TD></TR>");
 	bw.write("<HTML><BODY><TABLE BORDER=1 CELLPADDING=3 CELLSPACING=1 WIDTH=100%>");
 	bw.write("<TR COLS=7><TD BGCOLOR=#BDBDBD WIDTH=3%><FONT FACE=VERDANA COLOR=BLACK SIZE=2><B>SL No</B></FONT></TD>"
 			+ "<TD BGCOLOR=#BDBDBD WIDTH=10%><FONT FACE=VERDANA COLOR=BLACK SIZE=2><B>Step Name</B></FONT></TD>"

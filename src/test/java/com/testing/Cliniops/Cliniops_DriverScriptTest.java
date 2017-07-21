@@ -5,12 +5,14 @@ import java.lang.reflect.Method;
 import org.testng.annotations.Test;
 
 public class Cliniops_DriverScriptTest  {
-
-	public static void main(String[] args) throws Exception{
+@Test
+	public static void DriverscriptExecution() throws Exception{
 		Cliniops_AutomationScriptsTest CAS=new Cliniops_AutomationScriptsTest();
 	
-		String dtpath="C:\\Users\\Naresh\\Cliniops_Workspace\\Copy of Cliniops\\cliniops_AutomationScripts_Execution.xls";
-		String ReportsPath="C:\\Users\\Naresh\\Cliniops_Workspace\\Copy of Cliniops\\test-output\\Suite\\Report";
+		String dtpath="C:\\Users\\Naresh\\Cliniops_Workspace\\Backup3\\cliniops_AutomationScripts_Execution.xls";
+		String ReportsPath="C:\\Users\\Naresh\\Cliniops_Workspace\\Backup3\\test-output\\Suite\\Report\\";
+		//String dtpath="C:\\Users\\Naresh\\Desktop\\CliniopsScriptsExecution.xls";
+		//String ReportsPath="C:\\Users\\Naresh\\Desktop\\Report";
 		String Sheet="Sheet1";
 		String[][] recData = Cliniops_ReusableMethodsTest.ReadExcelSheet(dtpath, Sheet);
 		for(int i=0; i<recData.length; i++){ 

@@ -3,6 +3,7 @@ package com.testing.Cliniops;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
@@ -11,7 +12,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -33,7 +38,7 @@ Method tc ;
 			//Ignore--This is added to check in github
 			dr=new FirefoxDriver();	
 			dr.manage().window().maximize();
-System.out.println("firefox launched");
+
 		}
 		else if(browser.equalsIgnoreCase("chrome")){
 			//System.setProperty("webdriver.chrome.driver", "C:/Users/Zunaira's/Documents/QA automation/chromedriver.exe");
@@ -46,18 +51,85 @@ System.out.println("firefox launched");
 	        dr=new InternetExplorerDriver();
 	        
 	        dr.manage().window().maximize();
-	        Capabilities capabilities = DesiredCapabilities.internetExplorer();
-	        ((DesiredCapabilities) capabilities).setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
-	        ((DesiredCapabilities) capabilities).setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
-	        ((DesiredCapabilities) capabilities).setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP, true);
-
-	        ((DesiredCapabilities) capabilities).setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
+	        
 		}
 					
 		
 	}
+	@Test(priority=0)
+	public void auto_clini_login_001() throws Exception{
+		String expectedTooltipText;
+		String actualTooltipText;
+		Actions tooltip1=new Actions(dr);
+		dr.get("https://bridgetherapeutics.cliniops.com");
+		
+		WebElement usrname=dr.findElement(By.id("username"));
+		//new FluentWait(dr).withTimeout(100, TimeUnit.SECONDS).pollingEvery(10, TimeUnit.SECONDS);
+		Thread.sleep(2000);		
+		tooltip1.moveToElement(usrname).build().perform();
+		Thread.sleep(2000);
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		actualTooltipText=usrname.getAttribute("title");
+		expectedTooltipText="Enter Username";
+		TooltipValidation(usrname, expectedTooltipText, actualTooltipText);
+		
+		
+		WebElement password=dr.findElement(By.id("password"));
+		Thread.sleep(2000);
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		tooltip1.moveToElement(password).build().perform();
+		Thread.sleep(2000);
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		actualTooltipText=password.getAttribute("title");
+		expectedTooltipText="Enter Password";
+		TooltipValidation(password, expectedTooltipText, actualTooltipText);
+		
+
+		WebElement authenticate=dr.findElement(By.id("Authenticate"));
+		Thread.sleep(2000);		
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		tooltip1.moveToElement(authenticate).build().perform();
+		Thread.sleep(2000);
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		actualTooltipText=authenticate.getAttribute("title");
+		expectedTooltipText="Authenticate";
+		TooltipValidation(authenticate, expectedTooltipText, actualTooltipText);
+		
+		entertext(usrname, "Abhishek", "username field");
+		entertext(password, "Welcome123#", "Password field");
+		ButtonClick(authenticate, "Authenticate Button");
+		
+		//Thread.sleep(2000);		
+		WebDriverWait wait = new WebDriverWait(dr, 15);
+		wait.until(ExpectedConditions.elementToBeClickable(authenticate));
+		WebElement selectLang=dr.findElement(By.id("lang_type"));
+		Thread.sleep(2000);		
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		tooltip1.moveToElement(authenticate).build().perform();
+		Thread.sleep(2000);
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		actualTooltipText=selectLang.getAttribute("title");
+		expectedTooltipText="Select Language";
+		TooltipValidation(selectLang, expectedTooltipText, actualTooltipText);
+		
+		WebElement loginBtn=dr.findElement(By.xpath(".//*[@id='login']/div[7]/input"));
+		Thread.sleep(2000);		
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		tooltip1 = new Actions(dr);
+		tooltip1.moveToElement(loginBtn).build().perform();
+		Thread.sleep(2000);
+		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+		actualTooltipText=loginBtn.getAttribute("title");
+		expectedTooltipText="Login";
+		TooltipValidation(loginBtn, expectedTooltipText, actualTooltipText);
+		
+		
+	}
 	
-	@Test(priority=1)
+
+
+	
+	@Test(priority=1,enabled=false)
 	public void loginErrorMessage1() throws IOException, InterruptedException{
 		System.out.println("Login:Testcase1 started");
 		dr.get("https://bridgetherapeutics.cliniops.com");
@@ -80,7 +152,7 @@ System.out.println("firefox launched");
 		System.out.println("Login:Testcase1 ended");
 	
 	}
-	@Test(priority=2)
+	@Test(priority=2,enabled=false)
 	public void sucessFulLogin1() throws IOException, InterruptedException{
 		System.out.println("Login:Testcase2 started");
 		dr.get("https://bridgetherapeutics.cliniops.com");
@@ -117,7 +189,7 @@ System.out.println("firefox launched");
 
 
 }
-		 @Test(priority=3)
+		 @Test(priority=3,enabled=false)
 		 public void loginErrorMessage2() throws IOException, InterruptedException{
 		  System.out.println("Login:Testcase3 started");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
@@ -141,7 +213,7 @@ System.out.println("firefox launched");
 	 }
 		 
 		 
-		 @Test(priority=4)
+		 @Test(priority=4,enabled=false)
 		 public void loginErrorMessage3() throws IOException, InterruptedException{
 		  System.out.println("Login:Testcase4 started");
 		  dr.get("https://bridgetherapeutics.cliniops.com");
@@ -163,7 +235,7 @@ System.out.println("firefox launched");
 			System.out.println("Login:Testcase4 ended");
 		 }
 		 
-		 @Test(priority=5)
+		 @Test(priority=5,enabled=false)
 		 public void forgotPassword() throws IOException, InterruptedException{
 				System.out.println("Login:Testcase5 started");
 			 dr.get("https://bridgetherapeutics.cliniops.com");
