@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="browser" value="IE"/>
-  <test name="IETest(failed)">
-    <parameter name="browser" value="IE"/>
+  <test name="Driverscript(failed)">
     <classes>
-      <class name="com.testing.Cliniops.Cliniops_AutomationScriptsTest">
+      <class name="com.testing.Cliniops.Cliniops_DriverScriptTest">
         <methods>
-          <include name="loginErrorMessage1"/>
-          <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="closeBrowser"/>
-          <include name="Selectbrowser"/>
-          <include name="Selectbrowser"/>
-          <include name="Selectbrowser"/>
+          <include name="DriverscriptExecution"/>
         </methods>
-      </class> <!-- com.testing.Cliniops.Cliniops_AutomationScriptsTest -->
+      </class> <!-- com.testing.Cliniops.Cliniops_DriverScriptTest -->
     </classes>
-  </test> <!-- IETest(failed) -->
+  </test> <!-- Driverscript(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -108,17 +108,24 @@ public class Cliniops_ReusableMethodsTest {
 		if(obj.isDisplayed())
 		{
 			
-			if(Expectedtext.trim().contains(Actualtext.trim())){
-				Update_Report("Pass","ErrorMessage","Actual tool tip text: "+ Actualtext+" matching with expected text:"+Expectedtext);
+			if(Actualtext.equals("")){Update_Report("Fail","ErrorMessage","tool tip text not present");}
+			else if(Expectedtext.trim().contains(Actualtext.trim())){
+				Update_Report("Pass","TooltipValidation","Actual tool tip text: "+ Actualtext+" matching with expected text:"+Expectedtext);
 				//System.out.println("Pass:Actual tooltip text matching with expected text:"+Actualtext);
 				}
-		else{Update_Report("Fail","ErrorMessage","Actual tool tip text: "+ Actualtext+" not matching with expected text:"+Expectedtext);
+		    else{Update_Report("Fail","TooltipValidation","Actual tool tip text: "+ Actualtext+" not matching with expected text:"+Expectedtext);
 			//System.out.println("Fail:Actual tooltip text not matching with expected text"+Actualtext);
 			}
 		}
-		else{Update_Report("Fail","ErrorMessage",obj+" is not displayed,please check your application");
+		else{Update_Report("Fail","TooltipValidation",obj+" is not displayed,please check your application");
 			//System.out.println("Fail:"+obj+" is not displayed,please check your application");
 			}
+	}
+	
+	public static void Checkdisabled(WebElement obj,String objname) throws IOException{
+		if(obj.getAttribute("disabled").trim().contains("true")){Update_Report("Pass","Checkdisabled",objname+" is disabled");}
+		else{Update_Report("Fail","Checkdisabled",objname+" is not disabled");}
+		
 	}
 	//Name of the method:Readingtext
 	//Brief description:Reading text box value

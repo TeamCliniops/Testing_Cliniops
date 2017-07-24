@@ -64,22 +64,17 @@ Method tc ;
 		dr.get("https://bridgetherapeutics.cliniops.com");
 		
 		WebElement usrname=dr.findElement(By.id("username"));
-		//new FluentWait(dr).withTimeout(100, TimeUnit.SECONDS).pollingEvery(10, TimeUnit.SECONDS);
 		Thread.sleep(2000);		
 		tooltip1.moveToElement(usrname).build().perform();
 		Thread.sleep(2000);
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		actualTooltipText=usrname.getAttribute("title");
 		expectedTooltipText="Enter Username";
 		TooltipValidation(usrname, expectedTooltipText, actualTooltipText);
-		
-		
+				
 		WebElement password=dr.findElement(By.id("password"));
 		Thread.sleep(2000);
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		tooltip1.moveToElement(password).build().perform();
 		Thread.sleep(2000);
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		actualTooltipText=password.getAttribute("title");
 		expectedTooltipText="Enter Password";
 		TooltipValidation(password, expectedTooltipText, actualTooltipText);
@@ -87,181 +82,75 @@ Method tc ;
 
 		WebElement authenticate=dr.findElement(By.id("Authenticate"));
 		Thread.sleep(2000);		
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		tooltip1.moveToElement(authenticate).build().perform();
 		Thread.sleep(2000);
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		actualTooltipText=authenticate.getAttribute("title");
 		expectedTooltipText="Authenticate";
 		TooltipValidation(authenticate, expectedTooltipText, actualTooltipText);
 		
-		entertext(usrname, "Abhishek", "username field");
-		entertext(password, "Welcome123#", "Password field");
-		ButtonClick(authenticate, "Authenticate Button");
+		usrname.sendKeys("Abhishek");
+		password.sendKeys("Welcome123#");
+		authenticate.click();
 		
-		//Thread.sleep(2000);		
-		WebDriverWait wait = new WebDriverWait(dr, 15);
-		wait.until(ExpectedConditions.elementToBeClickable(authenticate));
+		Thread.sleep(2000);		
+		WebElement selectStudy=dr.findElement(By.id("investigator_study"));
+		Thread.sleep(2000);		
+		tooltip1.moveToElement(selectStudy).build().perform();
+		Thread.sleep(2000);
+		actualTooltipText=selectStudy.getAttribute("title");
+		expectedTooltipText="Select Study";
+		TooltipValidation(selectStudy, expectedTooltipText, actualTooltipText);
+				
+		Thread.sleep(2000);		
 		WebElement selectLang=dr.findElement(By.id("lang_type"));
 		Thread.sleep(2000);		
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
-		tooltip1.moveToElement(authenticate).build().perform();
+		tooltip1.moveToElement(selectLang).build().perform();
 		Thread.sleep(2000);
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		actualTooltipText=selectLang.getAttribute("title");
 		expectedTooltipText="Select Language";
 		TooltipValidation(selectLang, expectedTooltipText, actualTooltipText);
 		
 		WebElement loginBtn=dr.findElement(By.xpath(".//*[@id='login']/div[7]/input"));
 		Thread.sleep(2000);		
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		tooltip1 = new Actions(dr);
 		tooltip1.moveToElement(loginBtn).build().perform();
 		Thread.sleep(2000);
-		//dr.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 		actualTooltipText=loginBtn.getAttribute("title");
 		expectedTooltipText="Login";
 		TooltipValidation(loginBtn, expectedTooltipText, actualTooltipText);
 		
 		
 	}
-	
-
-
-	
-	@Test(priority=1,enabled=false)
-	public void loginErrorMessage1() throws IOException, InterruptedException{
-		System.out.println("Login:Testcase1 started");
-		dr.get("https://bridgetherapeutics.cliniops.com");
-		Thread.sleep(3000);
 		
-		WebElement username= dr.findElement(By.id("username"));
-		entertext(username, "Abhishek", "Username field");
-		
-		WebElement pwd= dr.findElement(By.id("password"));
-		entertext(pwd, "welcome", "Password field");
-		
-		WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		ButtonClick(authBtn, "Authenticate Button");
-		Thread.sleep(5000);
-		WebElement errorMsg=dr.findElement(By.xpath("//*[text()='Authenitcation failed !']"));
-		String error= errorMsg.getText();
-		String expectedText="Authenitcation failed !";
-		
-		ErrorMessage(errorMsg, expectedText, error);
-		System.out.println("Login:Testcase1 ended");
+	@Test(priority=1)
+	public void auto_clini_login_007() throws IOException, InterruptedException{
+	dr.get("https://bridgetherapeutics.cliniops.com/login");
+	WebElement usrname=dr.findElement(By.id("username"));
+	entertext(usrname, "Abhishek", "username field");
+	Thread.sleep(4000);
+	WebElement usrname1=dr.findElement(By.id("username"));
+	System.out.println(usrname1.getText());
+	ReadingText(usrname1,"user name");
 	
 	}
-	@Test(priority=2,enabled=false)
-	public void sucessFulLogin1() throws IOException, InterruptedException{
-		System.out.println("Login:Testcase2 started");
-		dr.get("https://bridgetherapeutics.cliniops.com");
-		
-		WebElement username= dr.findElement(By.id("username"));
-		entertext(username, "Abhishek", "Username field");
-		
-		WebElement pwd= dr.findElement(By.id("password"));
-		entertext(pwd, "Welcome123#", "Password field");
-		
-		WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		ButtonClick(authBtn, "Authenticate Button");
-		Thread.sleep(3000);
-		
-		
-		WebElement dd1=dr.findElement(By.id("investigator_study"));
-		ButtonClick(dd1, "dropdown1 is clicked");
-		WebElement opt1=dr.findElement(By.xpath("//*[text()='Cisplatin/Etoposide/Rad................-Small Cell Lung Cancer']"));
-		ButtonClick(opt1, "option1 is clicked");
-		//dropDown(dd1, "5");
-		Thread.sleep(3000);
 
-		WebElement dd2=dr.findElement(By.id("lang_type"));
-		ButtonClick(dd2, "dropdown2 is clicked");
-		WebElement opt2=dr.findElement(By.xpath("//*[text()='English']"));
-		ButtonClick(opt2, "option2 is clicked");
-		//dropDown(dd1, "1");
-				Thread.sleep(4000);
-		
-		WebElement clickLogin= dr.findElement(By.xpath(".//*[@id='login']/div[7]/input"));
-		ButtonClick(clickLogin, "Login");
-
-		System.out.println("Login:Testcase2 ended");
-
-
-}
-		 @Test(priority=3,enabled=false)
-		 public void loginErrorMessage2() throws IOException, InterruptedException{
-		  System.out.println("Login:Testcase3 started");
-		  dr.get("https://bridgetherapeutics.cliniops.com");
-		  WebElement username= dr.findElement(By.id("username"));
-		  entertext(username, "", "Username field");
-		  
-		  WebElement pwd= dr.findElement(By.id("password"));
-		  entertext(pwd, "", "Password field");
-		  Thread.sleep(4000);
-		  WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		  ButtonClick(authBtn, "Authenticate Button");
-		  WebElement usererrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the username']"));
-		  String error1= usererrorMsg.getText();
-		  String expectedText1="Please enter the username";
-		  ErrorMessage(usererrorMsg, expectedText1, error1);
-		  WebElement pwderrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the password']"));
-		  String error2= pwderrorMsg.getText();
-		  String expectedText2="Please enter the password";
-		  ErrorMessage(pwderrorMsg, expectedText2, error2);
-			System.out.println("Login:Testcase3 ended");
-	 }
-		 
-		 
-		 @Test(priority=4,enabled=false)
-		 public void loginErrorMessage3() throws IOException, InterruptedException{
-		  System.out.println("Login:Testcase4 started");
-		  dr.get("https://bridgetherapeutics.cliniops.com");
-		  
-		  WebElement username= dr.findElement(By.id("username"));
-		  entertext(username, "Abhishek", "Username field");
-		  
-		  WebElement pwd= dr.findElement(By.id("password"));
-		  entertext(pwd, "", "Password field");
-		  Thread.sleep(4000);
-		  WebElement authBtn= dr.findElement(By.id("Authenticate"));
-		  ButtonClick(authBtn, "Authenticate Button");
-		  Thread.sleep(4000);	  
-		  WebElement pwderrorMsg=dr.findElement(By.xpath("//*[text()='Please enter the password']"));
-		  String error2= pwderrorMsg.getText();
-		  String expectedText2="Please enter the password";
-		  ErrorMessage(pwderrorMsg, expectedText2, error2);
-		  Thread.sleep(3000);
-			System.out.println("Login:Testcase4 ended");
-		 }
-		 
-		 @Test(priority=5,enabled=false)
-		 public void forgotPassword() throws IOException, InterruptedException{
-				System.out.println("Login:Testcase5 started");
-			 dr.get("https://bridgetherapeutics.cliniops.com");
-			 
-			 WebElement username= dr.findElement(By.id("username"));
-			  entertext(username, "Abhishek", "Username field");
-			 Thread.sleep(3000);
-			 WebElement forgotPwd=dr.findElement(By.linkText("Forgot password..? Click here..."));
-			 forgotPwd.click();
-			 Thread.sleep(3000);
-			 WebElement email=dr.findElement(By.id("forgotemail"));
-			 entertext(email, "abc@gmail.com", "Email id");
-			 Thread.sleep(3000);
-			 WebElement requestNewPwd=dr.findElement(By.id("req_new_pass"));
-			 ButtonClick(requestNewPwd, "Request new password");
-			 Thread.sleep(3000);
-			 WebElement emailIdError=dr.findElement(By.xpath("//*[text()='Email-id does not exist in database.']"));
-			 String errorMsg=emailIdError.getText();
-			 String actualErrorMsg="Email-id does not exist in database.";
-			 ErrorMessage(emailIdError, actualErrorMsg, errorMsg);
-			 Thread.sleep(3000);
-			 WebElement backToLogin=dr.findElement(By.linkText("Back to Login"));
-			 backToLogin.click();
-			 Thread.sleep(5000);
-				System.out.println("Login:Testcase5 ended");
-		 }
+	@Test(priority=2)
+	public void auto_clini_login_008() throws IOException{
+	dr.get("https://bridgetherapeutics.cliniops.com/login");
+	WebElement password=dr.findElement(By.id("password"));
+	entertext(password, "Welcome123#", "password field");
+	WebElement password1=dr.findElement(By.id("password"));
+	String password2=password.getText();
+	String expectedPassword="***********";
+	ErrorMessage(password,expectedPassword,password2);
+	}
+	
+	@Test(priority=3)
+	public void auto_clini_login_009() throws IOException{
+		dr.get("https://bridgetherapeutics.cliniops.com/login");
+		WebElement selectstudy=dr.findElement(By.id("investigator_study"));
+		Checkdisabled(selectstudy,"Select Study");			
+	}
 		 @AfterMethod
 		 public void CloseBrowser(){
 			 dr.close();
